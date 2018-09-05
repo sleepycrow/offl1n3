@@ -1,0 +1,19 @@
+{
+  "name": "offl1n3",
+  "version": "1.0.0",
+  "description": "a game",
+  "main": "index.js",
+  "scripts": {
+    "build-dev": "rollup -c rollup_dev.js",
+    "build-prod": "rollup -c rollup_prod.js",
+    "size-linux": "rm -f dist.zip && zip -q -r dist.zip dist && stat -c \"Size: %s b\" dist.zip",
+    "size": "del /f /q dist.zip && \"C:\\Program Files\\WinRAR\\RAR.exe\" a -inul dist.zip dist && dir dist.zip"
+  },
+  "author": "sleepycrow",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^0.64.1",
+    "rollup-plugin-babel-minify": "^5.0.0",
+    "rollup-plugin-serve": "^0.4.2"
+  }
+}
