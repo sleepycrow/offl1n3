@@ -10,7 +10,7 @@ export default class Camera {
     }
 
     centerOnEntity(entity, tilemap){
-        var newX = entity.x - (this.width / 2) - (entity.width / 2);
+        var newX = entity.x - (this.width / 2) + (entity.width / 2);
         var newY = entity.y - (this.height / 2) + (entity.height / 2);
 
         if(tilemap){
